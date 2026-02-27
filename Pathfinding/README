@@ -1,0 +1,59 @@
+Este proyecto es una herramienta interactiva diseñada para visualizar cómo funcionan los algoritmos de búsqueda de caminos en una rejilla 2D. Creado con p5.js, combina una estética rosada con una implementación técnica avanzada de algoritmos de inteligencia artificial y teoría de grafos.
+
+
+Funcionalidades Principales:
+
+Algoritmos Implementados
+El proyecto permite comparar el comportamiento de cuatro algoritmos fundamentales:
+
+A (Estrella):* Algoritmo informado que utiliza una heurística (Distancia Manhattan) para encontrar el camino más eficiente.
+
+Dijkstra: Algoritmo que garantiza el camino más corto considerando el costo o peso de los nodos.
+
+BFS (Breadth-First Search): Búsqueda por anchura que explora nivel por nivel.
+
+DFS (Depth-First Search): Búsqueda por profundidad que explora ramas completas antes de retroceder.
+
+
+Desafío Extra: Terrenos de Costo Variable
+A diferencia de un visualizador básico, este proyecto implementa nodos de peso variable:
+
+Pantano (Costoso): El usuario puede pintar áreas de "pantano" (color durazno) que tienen un costo de 15.
+
+Inteligencia: Dijkstra y A* demostrarán su capacidad para rodear estos terrenos si el camino alternativo por cuadros blancos (costo 1) es más "barato" matemáticamente.
+
+
+
+interfaz y Experiencia de Usuario (UX)Menú de Inicio: 
+
+Ventana emergente (Modal) que explica los controles al cargar la página.
+Modo Brocha: Permite pintar paredes o terrenos de forma fluida simplemente arrastrando el mouse.
+Drag & Drop: El punto de Inicio (🌸) y Fin (✨) se pueden mover libremente por el mapa.
+Visualización de Manhattan: Opción para mostrar el valor H (heurística) en tiempo real sobre los nodos explorados.Aviso de Error: Si el camino está bloqueado por paredes, el sistema muestra un mensaje indicando que es imposible llegar.
+
+
+Controles de Usuario:
+
+Acción,Control
+Mover Inicio/Fin,Haz clic sobre 🌸 o ✨ y arrastra a una nueva posición.
+Pintar Paredes,Haz clic y arrastra sobre los cuadros blancos (Modo Brocha).
+Pintar Pantano,Mantén presionada la tecla T + Clic y arrastra.
+Borrar Pared/Pantano,Haz clic sobre una pared y arrastra para limpiar el área.
+Iniciar Algoritmo,Selecciona cualquiera de los 4 botones en el menú lateral.
+Limpiar Mapa,Limpiar Camino mantiene las paredes; Reiniciar Todo borra todo.
+
+
+Tecnologías Utilizadas
+HTML5 & CSS3: Estructura y diseño aesthetic con panel lateral scrollable.
+
+JavaScript (ES6): Lógica de los algoritmos y manejo de estados.
+
+p5.js: Librería para el renderizado del canvas y manejo de eventos de mouse/teclado.
+
+
+Estructura de Archivos
+index.html: Estructura base y menú de bienvenida.
+
+style.css: Estilos visuales, animaciones de botones y scrollbar personalizado.
+
+sketch.js: Motor principal que contiene la clase Node y los algoritmos de búsqueda

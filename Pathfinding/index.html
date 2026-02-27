@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pathfinding | FERNANDEZ RABELO MARICARMEN</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="welcome-modal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>¡Bienvenido al Pathfinding!</h2>
+        <p>Visualizador de <b>Maricarmen Fernandez Rabelo</b>.</p>
+
+        <div class="instructions-grid">
+          <div class="ins-item">
+            🌸 <b>Arrastra:</b> Mueve el inicio o el fin.
+          </div>
+          <div class="ins-item">
+            🖱️ <b>Click y Arrastra:</b> Pinta paredes rosas.
+          </div>
+          <div class="ins-item">⌨️ <b>T + Click:</b> Pinta pantanos.</div>
+          <div class="ins-item">
+            <b>Aviso:</b> Si no hay salida, te avisaré.
+          </div>
+        </div>
+
+        <button onclick="closeModal()" class="start-btn">¡Empezar!</button>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <h1>Pathfinding</h1>
+      <h3>Maricarmen Fernandez Rabelo</h3>
+
+      <div class="section">
+        <h3>Algoritmos</h3>
+        <button id="btn-astar">A* (Informada)</button>
+        <button id="btn-dijkstra">Dijkstra (Costos)</button>
+        <button id="btn-bfs">BFS (Anchura)</button>
+        <button id="btn-dfs">DFS (Profundidad)</button>
+      </div>
+
+      <div class="section">
+        <h3>Visualización</h3>
+        <label
+          style="
+            font-size: 0.8rem;
+            color: #db7093;
+            font-weight: bold;
+            cursor: pointer;
+          "
+        >
+          <input type="checkbox" id="check-h" /> Mostrar Manhattan (H)
+        </label>
+      </div>
+
+      <div class="section">
+        <h3>Acciones</h3>
+        <button id="btn-clear-path">Limpiar Camino</button>
+        <button id="btn-clear-all">Reiniciar Todo</button>
+      </div>
+
+      <div class="legend">
+        <h3>Leyenda</h3>
+        <div class="legend-item">
+          <div
+            class="color-box"
+            style="background: #ffffff; border: 1px solid #ffb7ce"
+          ></div>
+          INICIO
+        </div>
+        <div class="legend-item">
+          <div class="color-box" style="background: #9370db"></div>
+          FIN
+        </div>
+        <div class="legend-item">
+          <div class="color-box" style="background: #ffb7ce"></div>
+          PARED
+        </div>
+        <div class="legend-item">
+          <div class="color-box" style="background: #f2d2bd"></div>
+          PANTANO
+        </div>
+        <div class="legend-item">
+          <div
+            class="color-box"
+            style="
+              background: #ff69b4;
+              border-radius: 50%;
+              transform: scale(0.6);
+            "
+          ></div>
+          CAMINO
+        </div>
+      </div>
+    </div>
+
+    <div class="main-view">
+      <div id="canvas-container"></div>
+    </div>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
