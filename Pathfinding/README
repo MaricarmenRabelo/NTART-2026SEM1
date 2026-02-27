@@ -44,7 +44,7 @@ Limpiar Mapa,Limpiar Camino mantiene las paredes; Reiniciar Todo borra todo.
 
 
 Tecnologías Utilizadas
-HTML5 & CSS3: Estructura y diseño aesthetic con panel lateral scrollable.
+HTML5 & CSS3: Estructura y diseño con panel lateral scrollable.
 
 JavaScript (ES6): Lógica de los algoritmos y manejo de estados.
 
@@ -55,5 +55,6 @@ Estructura de Archivos
 index.html: Estructura base y menú de bienvenida.
 
 style.css: Estilos visuales, animaciones de botones y scrollbar personalizado.
+
 
 sketch.js: Motor principal que contiene la clase Node y los algoritmos de búsqueda
